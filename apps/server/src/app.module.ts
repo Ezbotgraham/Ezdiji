@@ -5,6 +5,7 @@ import { RoomsGateway } from './rooms/rooms.gateway'
 import { VoiceGateway } from './voice/voice.gateway'
 import { ScreenGateway } from './screen/screen.gateway'
 import { RemoteGateway } from './remote/remote.gateway'
+import { PresenceGateway } from './presence/presence.gateway'
 
 @Module({
   imports: [AuthModule],
@@ -14,6 +15,7 @@ import { RemoteGateway } from './remote/remote.gateway'
     VoiceGateway,
     ScreenGateway,
     RemoteGateway,
+    PresenceGateway,
   ],
 })
 export class AppModule {}
