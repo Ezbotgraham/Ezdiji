@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ezdiji
+      POSTGRES_PASSWORD: ezdiji
+      POSTGRES_DB: ezdiji
+    ports:
+      - '5432:5432'
+
+  redis:
+    image: redis:7
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
