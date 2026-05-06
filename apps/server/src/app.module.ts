@@ -7,6 +7,7 @@ import { ScreenGateway } from './screen/screen.gateway'
 import { RemoteGateway } from './remote/remote.gateway'
 import { PresenceGateway } from './presence/presence.gateway'
 import { UploadGateway } from './upload/upload.gateway'
+import { SoundpadGateway } from './voice/soundpad.gateway'
 
 @Module({
   imports: [AuthModule],
@@ -18,6 +19,7 @@ import { UploadGateway } from './upload/upload.gateway'
     RemoteGateway,
     PresenceGateway,
     UploadGateway,
+    SoundpadGateway,
   ],
 })
 export class AppModule {}
