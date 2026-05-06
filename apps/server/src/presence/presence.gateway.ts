@@ -7,6 +7,7 @@ import {
 } from '@nestjs/websockets'
 
 import { Server, Socket } from 'socket.io'
+import { PresenceStore } from './presence.store'
 
 @WebSocketGateway()
 export class PresenceGateway
@@ -15,21 +16,25 @@ export class PresenceGateway
   @WebSocketServer()
   server: Server
 
-  private onlineUsers = new Set<string>()
+  private store = new PresenceStore()
 
   handleConnection(@ConnectedSocket() client: Socket) {
-    this.onlineUsers.add(client.id)
+    const userId = client.handshake.auth.userId || client.id
+
+    this.store.connect(userId, client.id)
 
     this.server.emit('presence:update', {
-      online: Array.from(this.onlineUsers),
+      online: this.store.getOnlineUsers(),
     })
   }
 
   handleDisconnect(@ConnectedSocket() client: Socket) {
-    this.onlineUsers.delete(client.id)
+    const userId = client.handshake.auth.userId || client.id
+
+    this.store.disconnect(userId, client.id)
 
     this.server.emit('presence:update', {
-      online: Array.from(this.onlineUsers),
+      online: this.store.getOnlineUsers(),
     })
   }
 }
