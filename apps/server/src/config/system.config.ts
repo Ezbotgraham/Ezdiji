@@ -1,0 +1,1 @@
+export const RESERVED_ADMIN_USERNAMES = ['Esr1964']
