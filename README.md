@@ -11,10 +11,28 @@ Modern realtime communication platform inspired by Discord, TeamSpeak and remote
 - Redis
 - Docker
 
-## Planned Features
-- Realtime messaging
-- Voice channels
-- Screen sharing
-- Remote control
-- End-to-end encryption
-- Desktop + Mobile apps
+## Setup
+
+```bash
+pnpm install
+```
+
+### Run frontend
+
+```bash
+cd apps/web
+pnpm dev
+```
+
+### Run backend
+
+```bash
+cd apps/server
+pnpm start:dev
+```
+
+### Docker services
+
+```bash
+docker compose -f docker/docker-compose.yml up
+```
