@@ -1,119 +1,134 @@
 export default function HomePage() {
   return (
-    <main className="flex h-screen bg-[#0b0d10] text-white overflow-hidden">
-      <aside className="w-[72px] bg-[#111317] border-r border-white/5 flex flex-col items-center py-4 gap-4">
-        <div className="w-12 h-12 rounded-2xl bg-green-500 flex items-center justify-center font-bold text-black text-xl">
+    <main
+      style={{
+        display: 'flex',
+        height: '100vh',
+        background: '#0b0d10',
+        color: 'white',
+        fontFamily: 'sans-serif',
+      }}
+    >
+      <aside
+        style={{
+          width: 72,
+          background: '#111317',
+          padding: 16,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 12,
+          alignItems: 'center',
+        }}
+      >
+        <div
+          style={{
+            width: 48,
+            height: 48,
+            borderRadius: 16,
+            background: '#22c55e',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'black',
+            fontWeight: 'bold',
+          }}
+        >
           E
         </div>
-
-        <div className="w-12 h-12 rounded-2xl bg-[#1a1d22]" />
-        <div className="w-12 h-12 rounded-2xl bg-[#1a1d22]" />
-        <div className="w-12 h-12 rounded-2xl bg-[#1a1d22]" />
       </aside>
 
-      <aside className="w-[260px] bg-[#13161b] border-r border-white/5 flex flex-col">
-        <div className="h-16 border-b border-white/5 flex items-center px-4 font-semibold text-lg">
-          Ezdiji
-        </div>
+      <aside
+        style={{
+          width: 260,
+          background: '#13161b',
+          padding: 20,
+        }}
+      >
+        <h2>Ezdiji</h2>
 
-        <div className="p-3 space-y-2 overflow-y-auto">
-          <div className="px-3 py-2 rounded-xl bg-[#1d2128] hover:bg-[#242933] transition cursor-pointer">
-            # genel
-          </div>
-
-          <div className="px-3 py-2 rounded-xl hover:bg-[#1a1f27] transition cursor-pointer">
-            # yazilim
-          </div>
-
-          <div className="px-3 py-2 rounded-xl hover:bg-[#1a1f27] transition cursor-pointer">
-            # oyun
-          </div>
-
-          <div className="px-3 py-2 rounded-xl hover:bg-[#1a1f27] transition cursor-pointer">
-            # medya
-          </div>
-        </div>
-
-        <div className="mt-auto p-3 border-t border-white/5">
-          <div className="bg-[#1b2028] rounded-2xl p-3 flex items-center justify-between">
-            <div>
-              <div className="font-medium">Esr1964</div>
-              <div className="text-xs text-green-400">Online</div>
-            </div>
-
-            <div className="flex gap-2">
-              <button className="w-10 h-10 rounded-xl bg-[#2b313d] hover:bg-[#363e4d] transition">
-                🎤
-              </button>
-
-              <button className="w-10 h-10 rounded-xl bg-[#2b313d] hover:bg-[#363e4d] transition">
-                🔈
-              </button>
-            </div>
-          </div>
+        <div style={{ marginTop: 24, lineHeight: 2 }}>
+          <div># genel</div>
+          <div># yazilim</div>
+          <div># oyun</div>
+          <div># medya</div>
         </div>
       </aside>
 
-      <section className="flex-1 flex flex-col">
-        <header className="h-16 border-b border-white/5 flex items-center px-5 justify-between">
-          <div className="font-semibold text-lg"># genel</div>
+      <section
+        style={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <header
+          style={{
+            padding: 20,
+            borderBottom: '1px solid #1f2937',
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div># genel</div>
 
-          <div className="flex gap-3">
-            <button className="bg-[#1b2028] px-4 py-2 rounded-xl hover:bg-[#232933] transition">
-              Ekran Paylaş
-            </button>
-
-            <button className="bg-green-500 text-black px-4 py-2 rounded-xl font-medium hover:bg-green-400 transition">
-              Sese Katıl
-            </button>
+          <div style={{ display: 'flex', gap: 12 }}>
+            <button>Ekran Paylaş</button>
+            <button>Sese Katıl</button>
           </div>
         </header>
 
-        <div className="flex-1 overflow-y-auto p-6 space-y-4">
-          <div className="bg-[#151922] rounded-2xl p-4 max-w-[620px]">
-            <div className="font-semibold mb-1">Esr1964</div>
-            <div className="text-white/80">
-              Ezdiji alpha frontend aktif edildi.
-            </div>
+        <div style={{ flex: 1, padding: 24 }}>
+          <div
+            style={{
+              background: '#151922',
+              padding: 16,
+              borderRadius: 18,
+              marginBottom: 16,
+              maxWidth: 500,
+            }}
+          >
+            <b>Esr1964</b>
+            <p>Ezdiji alpha frontend aktif edildi.</p>
           </div>
 
-          <div className="bg-[#151922] rounded-2xl p-4 max-w-[620px]">
-            <div className="font-semibold mb-1">System</div>
-            <div className="text-white/80">
-              Websocket, realtime ve RTC sistemleri bağlanmaya hazır.
-            </div>
+          <div
+            style={{
+              background: '#151922',
+              padding: 16,
+              borderRadius: 18,
+              maxWidth: 500,
+            }}
+          >
+            <b>System</b>
+            <p>Realtime sistemleri bağlanmaya hazır.</p>
           </div>
         </div>
 
-        <div className="p-4 border-t border-white/5">
-          <div className="bg-[#171b22] rounded-2xl px-4 py-3 flex items-center gap-3">
+        <div style={{ padding: 20 }}>
+          <div
+            style={{
+              display: 'flex',
+              gap: 12,
+              background: '#171b22',
+              padding: 12,
+              borderRadius: 18,
+            }}
+          >
             <input
               placeholder="Mesaj gönder..."
-              className="bg-transparent outline-none flex-1 text-white"
+              style={{
+                flex: 1,
+                background: 'transparent',
+                border: 'none',
+                color: 'white',
+                outline: 'none',
+              }}
             />
 
-            <button className="bg-green-500 hover:bg-green-400 transition text-black px-4 py-2 rounded-xl font-medium">
-              Gönder
-            </button>
+            <button>Gönder</button>
           </div>
         </div>
       </section>
-
-      <aside className="w-[320px] bg-[#111419] border-l border-white/5 p-4 hidden xl:block">
-        <div className="font-semibold mb-4">Ses Odası</div>
-
-        <div className="space-y-3">
-          <div className="bg-[#1a1f27] rounded-2xl p-4">
-            <div className="font-medium">Genel Ses</div>
-            <div className="text-sm text-white/60 mt-1">2 kullanıcı bağlı</div>
-          </div>
-
-          <div className="bg-[#1a1f27] rounded-2xl p-4">
-            <div className="font-medium">Ekran Paylaşımı</div>
-            <div className="text-sm text-white/60 mt-1">Aktif yayın yok</div>
-          </div>
-        </div>
-      </aside>
     </main>
   )
 }
